@@ -28,44 +28,29 @@
       </header>
       <section>
         <script>
-          function nextPage(num)
+          function nextPage(curr,next)
           {
-            var img=document.getElementById("img_box").getElementsByTagName("img");
-            for(i=0;i<=img.length;i++)
-            {
-              if(num==i+1)
-              {
-                img[i].style.display="inline";
-              }
-              else
-              {
-                img[i].style.display="none";
-              }
-              if(num==13)
-              {
-                img[0].style.display="inline";
-              }
-            }
+            var img=document.getElementById(curr);
+            img.style.display="none";
+            img=document.getElementById(next);
+            img.style.display="inline";
           }
         </script>
         <p>
-          In development……
-          <a href="javascript:nextPage(0);" class="button">Next Page</a>
-          
           <div id="img_box">
-            <a href="javascript:nextPage(0);"><img src="http://imglf1.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5UG5pZ1NVbSsxTXB6Z0tka2NuRWhydXlMZFA2bElhNDR3PT0.jpg" style="display:inline;"></a>
-            <a href="javascript:nextPage(1);"><img src="http://imglf1.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5RlQ5Q1NpczE4L1ZpRk5SeGRjMm1rWjY4ZkF2Y1E1aUtBPT0.jpg" style="display:none;"></a>
-            <img src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5TlhtdUNnTVJuQW9ESnBaUS9CK0tmSjdiZjZKdklFQ0N3PT0.jpg" style="display:none;">
-            <img src="http://imglf0.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5RnhWdHEra0EvK2Z6MGJWdmp4NDVNbHFhcGI2VFFpa3pRPT0.jpg" style="display:none;">
-            <img src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5RkQ3VG9ER2xtVzgvRnI0ZmpOVlBZKzN2SGpGWEhHMHVBPT0.jpg" style="display:none;">
-            <img src="http://imglf.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5TlJuRkQydktrVFQ1Z0VzMkNlSDJpN1BseGtYUFVGMjVBPT0.jpg" style="display:none;">
-            <img src="http://imglf1.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5R2Fza3RBZTBoQzVkalZjcDRLTEdnb0Vtd3YreWRRb0pnPT0.jpg" style="display:none;">
-            <img src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5QTkvZFpIcXRCSmVYaUFBemtBaWdDZTVqMnNwVGhHcGpBPT0.jpg" style="display:none;">
-            <img src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5QmFpMlc3UlAxZVNtUng4OVFxNWt6NForYitaM3p0M253PT0.jpg" style="display:none;">
-            <img src="http://imglf0.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5RTBTMEdESWJGLytSN1krd1NMVFFUVWVOcm4xRi84VHZRPT0.jpg" style="display:none;">
-            <img src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5Qkg1cUwybllxS1BTbzM3SE5SQTcrOXJ5MVFmU0hpS3FRPT0.jpg" style="display:none;">
-            <img src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5STNDdXJnd1JhWkFCR0Z2OHE5TG44blBNVFo0dDY5UzlBPT0.jpg" style="display:none;">
-            <img src="http://imglf1.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5SVFjT0MyOFVyVlJ0NThOakg3a0VpVnlHeVFCTnhtQVdBPT0.jpg" style="display:none;">
+            <img id="1" src="http://imglf1.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5UG5pZ1NVbSsxTXB6Z0tka2NuRWhydXlMZFA2bElhNDR3PT0.jpg" style="display:inline;" onclick="nextPage(1,2)"/>
+            <img id="2" src="http://imglf1.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5RlQ5Q1NpczE4L1ZpRk5SeGRjMm1rWjY4ZkF2Y1E1aUtBPT0.jpg" style="display:none;" onclick="nextPage(2,3)"/>
+            <img id="3" src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5TlhtdUNnTVJuQW9ESnBaUS9CK0tmSjdiZjZKdklFQ0N3PT0.jpg" style="display:none;" onclick="nextPage(3,4);"/>
+            <img id="4" src="http://imglf0.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5RnhWdHEra0EvK2Z6MGJWdmp4NDVNbHFhcGI2VFFpa3pRPT0.jpg" style="display:none;" onclick="nextPage(4,5);"/>
+            <img id="5" src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5RkQ3VG9ER2xtVzgvRnI0ZmpOVlBZKzN2SGpGWEhHMHVBPT0.jpg" style="display:none;" onclick="nextPage(5,6);"/>
+            <img id="6" src="http://imglf.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5TlJuRkQydktrVFQ1Z0VzMkNlSDJpN1BseGtYUFVGMjVBPT0.jpg" style="display:none;" onclick="nextPage(6,7);"/>
+            <img id="7" src="http://imglf1.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5R2Fza3RBZTBoQzVkalZjcDRLTEdnb0Vtd3YreWRRb0pnPT0.jpg" style="display:none;" onclick="nextPage(7,8);"/>
+            <img id="8" src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5QTkvZFpIcXRCSmVYaUFBemtBaWdDZTVqMnNwVGhHcGpBPT0.jpg" style="display:none;" onclick="nextPage(8,9);"/>
+            <img id="9" src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5QmFpMlc3UlAxZVNtUng4OVFxNWt6NForYitaM3p0M253PT0.jpg" style="display:none;" onclick="nextPage(9,A);"/>
+            <img id="A" src="http://imglf0.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5RTBTMEdESWJGLytSN1krd1NMVFFUVWVOcm4xRi84VHZRPT0.jpg" style="display:none;" onclick="nextPage(A,B);"/>
+            <img id="B" src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5Qkg1cUwybllxS1BTbzM3SE5SQTcrOXJ5MVFmU0hpS3FRPT0.jpg" style="display:none;" onclick="nextPage(B,C);"/>
+            <img id="C" src="http://imglf2.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5STNDdXJnd1JhWkFCR0Z2OHE5TG44blBNVFo0dDY5UzlBPT0.jpg" style="display:none;" onclick="nextPage(C,D);"/>
+            <img id="D" src="http://imglf1.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5SVFjT0MyOFVyVlJ0NThOakg3a0VpVnlHeVFCTnhtQVdBPT0.jpg" style="display:none;" onclick="nextPage(D,1);"/>
           </div>
         </p>
       </section>
