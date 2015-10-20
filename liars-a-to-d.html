@@ -42,13 +42,55 @@
               nextPage(13,1);
             }
           }
+          function goToPage(num)
+          {
+            var img=document.getElementsByTagName("img");
+            var next=document.getElementById(num);
+            for(i=0;i<img.length;i++)
+            {
+              if(img[i].style.display=="inline")
+              {
+                img[i].style.display="none";
+                next.style.display="inline";
+                break;
+              }
+            }
+          }
         </script>
         <p>
           <h1>Liars, A to D</h1>
-          <h2>Original Writer: James Roberts<br>Artist:  Matt Dallas</h2>
+          <h2>Original Writer:&nbsp;&nbsp;&nbsp;&nbsp;James Roberts<br>Artist:&nbsp;&nbsp;&nbsp;&nbsp;Matt Dallas</h2>
           <a href="http://theunderbase.co.uk/wiki.asp?o=Liars,%20A-D">Original English Version at Underbase</a>
           <br><br>
           <strong>Left Click On the Image to Continue</strong>
+          
+          <div id="link_box">
+            <a href="javascript:goToPage(1)">1</a>
+            &nbsp;
+            <a href="javascript:goToPage(2)">2</a>
+            &nbsp;
+            <a href="javascript:goToPage(3)">3</a>
+            &nbsp;
+            <a href="javascript:goToPage(4)">4</a>
+            &nbsp;
+            <a href="javascript:goToPage(5)">5</a>
+            &nbsp;
+            <a href="javascript:goToPage(6)">6</a>
+            &nbsp;
+            <a href="javascript:goToPage(7)">7</a>
+            &nbsp;
+            <a href="javascript:goToPage(8)">8</a>
+            &nbsp;
+            <a href="javascript:goToPage(9)">9</a>
+            &nbsp;
+            <a href="javascript:goToPage(10)">10</a>
+            &nbsp;
+            <a href="javascript:goToPage(11)">11</a>
+            &nbsp;
+            <a href="javascript:goToPage(12)">12</a>
+            &nbsp;
+            <a href="javascript:goToPage(13)">13</a>
+          </div>
           <div id="img_box">
             <img id="1" src="http://imglf1.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5UG5pZ1NVbSsxTXB6Z0tka2NuRWhydXlMZFA2bElhNDR3PT0.jpg" style="display:inline;" onclick="nextPage(1,2)"/>
             <img id="2" src="http://imglf1.nosdn.127.net/img/R043M0NBOTVIRU8wMStUKzFGU1A5RlQ5Q1NpczE4L1ZpRk5SeGRjMm1rWjY4ZkF2Y1E1aUtBPT0.jpg" style="display:none;" onclick="nextPage(2,3)"/>
