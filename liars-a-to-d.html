@@ -14,7 +14,21 @@
       #sideToggle{ display:none; }
       #sideToggle:checked + aside{ left:0; }
       #sideToggle:checked ~ #wrap{ padding-left:220px; }
-      body > aside{ position:absolute; top:0; bottom:0; left:-200px; width:200px; background:#f1103a; transition:0.2s ease-out; -webkit-transition:0.2s ease-out; }
+      body > aside{ 
+        position:absolute; 
+        top:0; 
+        bottom:0; 
+        left:-200px; 
+        width:200px; 
+        background: #5198DF;
+        background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #77b9fb), color-stop(100%, #3782cd));
+        background: -webkit-linear-gradient(#77b9fb, #3782cd);
+        background: -moz-linear-gradient(#77b9fb, #3782cd);
+        background: -o-linear-gradient(#77b9fb, #3782cd);
+        background: -ms-linear-gradient(#77b9fb, #3782cd);
+        background: linear-gradient(#77b9fb, #3782cd);
+        transition:0.2s ease-out; -webkit-transition:0.2s ease-out; 
+      }
       body > aside > h2{ color:#FFF; text-align:center; font-weight:normal; padding:10px; }
       #wrap{ margin-left:20px; padding:10px; transition:0.25s ease-out; -webkit-transition:0.25s ease-out; }
         #wrap > label{ display:inline-block; }
