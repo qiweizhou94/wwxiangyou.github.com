@@ -9,7 +9,32 @@
     <link rel="stylesheet" href="stylesheets/github-dark.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <style>
+      body.sideMenu{ margin:0; -webkit-transform:none; transform:none; }
+      #sideToggle{ display:none; }
+      #sideToggle:checked + aside{ left:0; }
+      #sideToggle:checked ~ #wrap{ padding-left:220px; }
+      body > aside{ position:absolute; top:0; bottom:0; left:-200px; width:200px; background:#f1103a; transition:0.2s ease-out; -webkit-transition:0.2s ease-out; }
+      body > aside > h2{ color:#FFF; text-align:center; font-weight:normal; padding:10px; }
+      #wrap{ margin-left:20px; padding:10px; transition:0.25s ease-out; -webkit-transition:0.25s ease-out; }
+        #wrap > label{ display:inline-block; }
+          #wrap > label{ 
+            background:#f1103a;
+            border-radius:50px;
+            color: #FFF;
+            cursor: pointer;
+            display: block;
+            font-family: Courier New;
+            font-size: 25px;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            line-height: 35px;
+            text-align: center;
+            text-shadow: 0 -4px;
+          }
+          #wrap > label:hover{ background:#000; }
+    </style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -57,15 +82,18 @@
             }
           }
         </script>
-        <p>
-          <aside>
-            <dl><dt>Transformers Translations</dt></dl>
-            <ul>
-              <li><a href="telefunken.html"><span class="nor">Telefunken</span></a></li>
-              <li><span class="nor"><strong>Liars, A to D</strong></span></a></li>
-            </ul>
-           </aside>
-        </p>
+        <input type='checkbox' id='sideToggle'>
+        <aside>
+          <dl><dt>Transformers Translations</dt></dl>
+          <ul>
+           <li><a href="telefunken.html"><span class="nor">Telefunken</span></a></li>
+           <li><span class="nor"><strong>Liars, A to D</strong></span></a></li>
+          </ul>
+        </aside>
+        <div id='wrap'>
+           <label id='sideMenuControl' for='sideToggle'>=</label>
+          <p>HTML5/CSS3点击显示侧边框   </p>
+        </div>
         <p>
           <h1>Liars, A to D</h1>
           <h2>Original Writer:</h2><h3>&nbsp;&nbsp;James Roberts</h3><h2>Artist:</h2><h3>&nbsp;&nbsp;Matt Dallas</h3>
